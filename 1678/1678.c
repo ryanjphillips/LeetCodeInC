@@ -2,8 +2,7 @@
 
 char * interpret(char * command){
     
-    //char * finalChar = (char *)malloc(sizeof(char) * strlen(command) + 1);
-    char * finalChar = (char *)malloc(sizeof(char) * 100);
+    char * finalChar = (char *)calloc(sizeof(char) * strlen(command) + 1, 1);
     int finalCounter = 0;
 
     for(int commandCounter = 0; command[commandCounter] != '\0'; commandCounter++, finalCounter++){
